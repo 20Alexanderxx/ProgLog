@@ -39,17 +39,17 @@ architecture test of gatter_tb is
   end component;
   
   -- Signale für die Eingänge und Ausgänge der Gatter
-  signal A, B : bit := '0';
-  signal NOT_Y, AND_Y, NAND_Y, OR_Y, NOR_Y, XOR_Y, XNOR_Y : bit;
+  signal A_s, B_s : bit := '0';
+  signal NOT_Y_s, AND_Y_s, NAND_Y_s, OR_Y_s, NOR_Y_s, XOR_Y_s, XNOR_Y_s : bit;
 begin
   -- Instanziierung der Gatter
-  U1: NOT_Gate port map (A => A, Y => NOT_Y);
-  U2: AND_Gate port map (A => A, B => B, Y => AND_Y);
-  U3: NAND_Gate port map (A => A, B => B, Y => NAND_Y);
-  U4: OR_Gate port map (A => A, B => B, Y => OR_Y);
-  U5: NOR_Gate port map (A => A, B => B, Y => NOR_Y);
-  U6: XOR_Gate port map (A => A, B => B, Y => XOR_Y);
-  U7: XNOR_Gate port map (A => A, B => B, Y => XNOR_Y);
+  U1: NOT_Gate port map (A => A_s, Y => NOT_Y_s);
+  U2: AND_Gate port map (A => A_s, B => B_s, Y => AND_Y_s);
+  U3: NAND_Gate port map (A => A_s, B => B_s, Y => NAND_Y_s);
+  U4: OR_Gate port map (A => A_s, B => B_s, Y => OR_Y_s);
+  U5: NOR_Gate port map (A => A_s, B => B_s, Y => NOR_Y_s);
+  U6: XOR_Gate port map (A => A_s, B => B_s, Y => XOR_Y_s);
+  U7: XNOR_Gate port map (A => A_s, B => B_s, Y => XNOR_Y_s);
   
   -- Prozess zur Erzeugung der Testvektoren
   process
@@ -80,18 +80,18 @@ end procedure;
     
   begin
     for i in inputs'range loop -- Für jeden Testvektor
-      A <= inputs(i)(0); -- Setze den ersten Eingang des Gatters auf den ersten Bit des Testvektors
-      B <= inputs(i)(1); -- Setze den zweiten Eingang des Gatters auf den zweiten Bit des Testvektors
+      A_s <= inputs(i)(0); -- Setze den ersten Eingang des Gatters auf den ersten Bit des Testvektors
+      B_s <= inputs(i)(1); -- Setze den zweiten Eingang des Gatters auf den zweiten Bit des Testvektors
       wait for 10 ns; -- Warte 10 ns, damit sich die Ausgänge stabilisieren
       
       -- Rufe die Prozedur check_result für jedes Gatter auf und gebe die tatsächlichen und erwarteten Ausgänge sowie den Namen des Gatters an
-      check_result(NOT_Y, NOT_results(i), "NOT");
-      check_result(AND_Y, AND_results(i), "AND");
-      check_result(NAND_Y, NAND_results(i), "NAND");
-      check_result(OR_Y, OR_results(i), "OR");
-      check_result(NOR_Y, NOR_results(i), "NOR");
-      check_result(XOR_Y, XOR_results(i), "XOR");
-      check_result(XNOR_Y, XNOR_results(i), "XNOR");
+      check_result(NOT_Y_s, NOT_results(i), "NOT");
+      check_result(AND_Y_s, AND_results(i), "AND");
+      check_result(NAND_Y_s, NAND_results(i), "NAND");
+      check_result(OR_Y_s, OR_results(i), "OR");
+      check_result(NOR_Y_s, NOR_results(i), "NOR");
+      check_result(XOR_Y_s, XOR_results(i), "XOR");
+      check_result(XNOR_Y_s, XNOR_results(i), "XNOR");
     end loop;
     
     wait; -- Beende den Prozess
