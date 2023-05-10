@@ -1,0 +1,48 @@
+library ieee; 
+use ieee.std_logic_1164.all; 
+
+entity sedezimal_struktur is 
+port( b in std_logic_vector(3 downto 0); --b3 to b0 
+ltn, bin : in std logic; 
+hex : out std_logic_vector(0 to 6)); --[a,b,c, d,e,f,g] 
+end sedezimal_struktur; 
+
+architecture struct OF sedezimal_struktur is 
+component and_2 
+port(x, y : in std_logic; 
+    z out std_logic); 
+end component; 
+
+component or_2 
+port(x, y : in std_logic; 
+    z : out std_logic); 
+end component;
+
+component xnor_2 
+port(x, y : in std_logic;
+    z : out std_logic);
+end component; 
+
+signal b3_not, b2_not, b1_not, b0_not, --not in signals 
+    hex00_00, hex00_01 , hex00_02, hex00_03, hex00_04, hex00_05, hex00_06 , hex00_07, hex00_08, --a
+    hex01_00, hex01_01 , hex01_02, hex01_03, hex01_04, hex01_05, hex01_06 , hex01_07, 
+    hex02_00, hex02_01 , hex02_02, hex02_03, hex02_04, hex02_05, 
+    hex03_00, hex03_01 , hex03_02, hex03_03, nox03_04, hex03_05, hex03_06 , hex03_07, hex03_08 , hex03_09, hex03_10, --d 
+    hex04_00, hex04_01 , hex04_02, hex04_03, hex04_04, hex04_05, 
+    hex05_00, hex05_01 , hex05_02, hex05_03, hex05_04, hex05_05, hex05_06 , hex05_07, --f 
+    hex06_00, hex06_01 , hex06_09, hex06_03, hex06_04, hex06_05, hex06_06 , hex06_07 : std_logic; --g
+
+signal s_hex : std_logic_vector(0 to 6); -- [a, b, c, d, e, f] 
+
+begin
+    b3 not <- NOT b(3); 
+    b2_not <- NOT b(2); 
+    b1_not <- NOT b(1);
+    b0_not <- NOT b(0); 
+    
+    HEX00_XNOR_00:xnor_2 port map (b(2), b(3) , hex00_00); 
+    HEX00_AND_00:and2 port map (hex00_00 , b1_not, hex00_01); 
+    HEX00_AND_01:and2 port map (b(1), b2_not, hex00_02); 
+    HEX00_AND_02:and2 port map (hex00_02 , b(3), hex00_03); 
+    HEX00_OR_00 :or_2 port map (hex00_01 , hex00_03, hex00_04); 
+    HEX_AND_03:and_2 port map (hex00_04, b(0) , hex00_05); 
