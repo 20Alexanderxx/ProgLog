@@ -1,0 +1,123 @@
+|kombinatorik
+x[0] => mux2to1:mux_vector:0:DUT.x
+x[0] => red[8].DATAIN
+x[1] => mux2to1:mux_vector:1:DUT.x
+x[1] => red[9].DATAIN
+x[2] => mux2to1:mux_vector:2:DUT.x
+x[2] => red[10].DATAIN
+x[3] => mux2to1:mux_vector:3:DUT.x
+x[3] => red[11].DATAIN
+x[4] => mux2to1:mux_vector:4:DUT.x
+x[4] => red[12].DATAIN
+x[5] => mux2to1:mux_vector:5:DUT.x
+x[5] => red[13].DATAIN
+x[6] => mux2to1:mux_vector:6:DUT.x
+x[6] => red[14].DATAIN
+x[7] => mux2to1:mux_vector:7:DUT.x
+x[7] => red[15].DATAIN
+y[0] => mux2to1:mux_vector:0:DUT.y
+y[0] => red[0].DATAIN
+y[1] => mux2to1:mux_vector:1:DUT.y
+y[1] => red[1].DATAIN
+y[2] => mux2to1:mux_vector:2:DUT.y
+y[2] => red[2].DATAIN
+y[3] => mux2to1:mux_vector:3:DUT.y
+y[3] => red[3].DATAIN
+y[4] => mux2to1:mux_vector:4:DUT.y
+y[4] => red[4].DATAIN
+y[5] => mux2to1:mux_vector:5:DUT.y
+y[5] => red[5].DATAIN
+y[6] => mux2to1:mux_vector:6:DUT.y
+y[6] => red[6].DATAIN
+y[7] => mux2to1:mux_vector:7:DUT.y
+y[7] => red[7].DATAIN
+s => mux2to1:mux_vector:7:DUT.s
+s => mux2to1:mux_vector:6:DUT.s
+s => mux2to1:mux_vector:5:DUT.s
+s => mux2to1:mux_vector:4:DUT.s
+s => mux2to1:mux_vector:3:DUT.s
+s => mux2to1:mux_vector:2:DUT.s
+s => mux2to1:mux_vector:1:DUT.s
+s => mux2to1:mux_vector:0:DUT.s
+red[0] << y[0].DB_MAX_OUTPUT_PORT_TYPE
+red[1] << y[1].DB_MAX_OUTPUT_PORT_TYPE
+red[2] << y[2].DB_MAX_OUTPUT_PORT_TYPE
+red[3] << y[3].DB_MAX_OUTPUT_PORT_TYPE
+red[4] << y[4].DB_MAX_OUTPUT_PORT_TYPE
+red[5] << y[5].DB_MAX_OUTPUT_PORT_TYPE
+red[6] << y[6].DB_MAX_OUTPUT_PORT_TYPE
+red[7] << y[7].DB_MAX_OUTPUT_PORT_TYPE
+red[8] << x[0].DB_MAX_OUTPUT_PORT_TYPE
+red[9] << x[1].DB_MAX_OUTPUT_PORT_TYPE
+red[10] << x[2].DB_MAX_OUTPUT_PORT_TYPE
+red[11] << x[3].DB_MAX_OUTPUT_PORT_TYPE
+red[12] << x[4].DB_MAX_OUTPUT_PORT_TYPE
+red[13] << x[5].DB_MAX_OUTPUT_PORT_TYPE
+red[14] << x[6].DB_MAX_OUTPUT_PORT_TYPE
+red[15] << x[7].DB_MAX_OUTPUT_PORT_TYPE
+green[0] << mux2to1:mux_vector:0:DUT.f
+green[1] << mux2to1:mux_vector:1:DUT.f
+green[2] << mux2to1:mux_vector:2:DUT.f
+green[3] << mux2to1:mux_vector:3:DUT.f
+green[4] << mux2to1:mux_vector:4:DUT.f
+green[5] << mux2to1:mux_vector:5:DUT.f
+green[6] << mux2to1:mux_vector:6:DUT.f
+green[7] << mux2to1:mux_vector:7:DUT.f
+
+
+|kombinatorik|mux2to1:\mux_vector:7:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:6:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:5:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:4:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:3:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:2:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:1:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kombinatorik|mux2to1:\mux_vector:0:DUT
+x => f.DATAB
+y => f.DATAA
+s => f.OUTPUTSELECT
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
