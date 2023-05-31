@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 
 entity siebensegstruktur is 
 port( b : in std_logic_vector(3 downto 0); -- b3 to b0 
-    ltn, bln : in std_logic; 
+    ltn, bin : in std_logic; 
     hex : out std_logic_vector(0 to 6)); -- hex00..hex06 
 end siebensegstruktur;
 
@@ -110,13 +110,13 @@ begin
 	 HEX06_AND_06:myAND port map(hex06_06, b(2), hex06_07);
 	 HEX06_OR_01 :myOR port map (hex06_01 , hex06_07, s_hex(6));
 	 
-	 p1: process	 (ltn, bln, s_hex)
+	 p1: process	 (ltn, bin, s_hex)
 	 begin
-		if (ltn = '1' and bln = '0') then
+		if (ltn = '1' and bin = '0') then
 			hex <= s_hex;
-		elsif(ltn = '0' and bln = '1') then
+		elsif(ltn = '0' and bin = '1') then
 			hex <= "0000000";
-		elsif(ltn = '0' and bln = '0') then
+		elsif(ltn = '0' and bin = '0') then
 			hex <= "1111111";
 		else
 			hex <= "1111111";
