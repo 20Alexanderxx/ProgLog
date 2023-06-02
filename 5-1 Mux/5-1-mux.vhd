@@ -17,7 +17,7 @@ begin
   			m <= v;
   		elsif (s1='1' And s0='0') then
   			m <= w;
-  		else
+  		elsif (s1='1' And s0='1') then
   			m <= x;
   		end if;
   	elsif (s2='1')
