@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_5to1_mux is
+end tb_5to1_mux;
+
+architecture test of tb_5to1_mux is
+
+signal u, v, w, x, y : std_logic := '0';
+signal s0, s1, s2 : std_logic := '0';
+signal m : std_logic;
+
+component mux_5to1 is
+port(
+    u, v, w, x, y : in std_logic;
+    s0, s1, s2 : in std_logic;
+    m : out std_logic
+);
+end component;
+
+begin
+
+dut: mux_5to1 port map(
+    u => u,
+    v => v,
+    w => w,
+    x => x,
+    y => y,
+    s0 => s0,
+    s1 => s1,
+    s2 => s2,
+    m => m
+);
+
+process
+begin
+    -- loop through all possible combinations of inputs
+    for i in 0 to 31 loop
+        -- assign the inputs based on the binary representation of i
+        u <= std_logic(to_unsigned(i, 5)(4));
+        v <= std_logic(to_unsigned(i, 5)(3));
+        w <= std_logic(to_unsigned(i, 5)(2));
+        x <= std_logic(to_unsigned(i, 5)(1));
+        y <= std_logic(to_unsigned(i, 5)(0));
+        -- loop through all possible combinations of selectors
+        for j in 0 to 7 loop
+            -- assign the selectors based on the binary representation of j
+            s0 <= std_logic(to_unsigned(j, 3)(2));
+            s1 <= std_logic(to_unsigned(j, 3)(1));
+            s2 <= std_logic(to_unsigned(j, 3)(0));
+            -- wait for some time to observe the output
+            wait for 10 ns;
+        end loop;
+    end loop;
+    -- stop the simulation
+    wait;
+end process;
+
+end test;

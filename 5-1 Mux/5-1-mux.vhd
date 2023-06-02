@@ -1,12 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity mux4to1 is
+entity mux5to1 is
 	port( y, x, w, v, u, s2, s1, s0 : in  std_logic;
 		   m                      : out std_logic);
-end mux4to1;
+end mux5to1;
 
-architecture behave of mux4to1 is
+architecture behave of mux5to1 is
 begin
 	process(s2, s1, s0)
 	begin
