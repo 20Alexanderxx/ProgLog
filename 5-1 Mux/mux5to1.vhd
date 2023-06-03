@@ -20,8 +20,8 @@ begin
   		elsif (s1='1' And s0='1') then
   			m <= x;
   		end if;
-  	elsif (s2='1')
-  	  m <= y
+  	elsif (s2='1') then
+  	  m <= y;
     end if;
 	end process;	
 end behave;
