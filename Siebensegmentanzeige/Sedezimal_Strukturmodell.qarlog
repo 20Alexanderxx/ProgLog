@@ -1,0 +1,23 @@
+Quartus Prime Archive log --	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/Sedezimal_Strukturmodell.qarlog
+
+Archive:	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/Sedezimal_Strukturmodell.qar
+Date:		Sun Jun  4 19:05:29 2023
+Quartus Prime		22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/siebenseg.qpf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/siebenseg.qsf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/siebenseg.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/siebenseg_tb.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/Siebensegmentanzeige/siebensegstruktur.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myAND.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myNAND.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myNOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myXNOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myXOR.vhd
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

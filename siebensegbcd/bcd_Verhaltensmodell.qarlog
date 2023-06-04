@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd_Verhaltensmodell.qarlog
+
+Archive:	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd_Verhaltensmodell.qar
+Date:		Sun Jun  4 18:56:10 2023
+Quartus Prime		22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myAND.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myNOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myXOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd.qpf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd.qsf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd_tb.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcdstruk.vhd
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

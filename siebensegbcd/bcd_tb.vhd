@@ -6,7 +6,7 @@ entity bcd_tb is
 end bcd_tb;
 
 architecture testbench of bcd_tb is
-component bcd 
+component bcdstruk 
 	port(	b : in std_logic_vector(3 downto 0);
 			ltn, bin : in std_logic; 
 			hex : out std_logic_vector(0 to 6));
@@ -17,7 +17,7 @@ signal ltn_s, bin_s : std_logic;
 signal hex_s : std_logic_vector(0 to 6);
 
 begin
-dut: bcd
+dut: bcdstruk
 port map (b_s, ltn_s, bin_s, hex_s);
 process
 begin
