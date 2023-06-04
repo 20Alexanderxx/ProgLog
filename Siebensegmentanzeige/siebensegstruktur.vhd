@@ -74,7 +74,7 @@ begin
     HEX03_AND_02:myAND port map (hex03_01 , b3_not, hex03_02); 
     HEX03_OR_00 :myOR port map (hex03_00 , hex03_02, hex03_03); 
     HEX03_AND_03:myAND port map (hex03_03, b(0) , hex03_04);
-	 HEX03_AND_04: myAND port map(b(1), b(2), hex03_05);
+	 HEX03_AND_04: myAND port map(b(1), b(3), hex03_05);
 	 HEX03_AND_05:myAND port map (hex03_05, b2_not , hex03_06);
 	 HEX03_AND_06:myAND port map (b1_not, b3_not , hex03_07);
 	 HEX03_AND_07:myAND port map (hex03_07, b(2) , hex03_08);
