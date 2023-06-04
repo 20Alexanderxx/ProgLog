@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Sat Jun  3 13:44:48 2023
+Analysis & Synthesis Status : Successful - Sun Jun  4 21:09:05 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : siebenseg
-Top-level Entity Name : siebenseg
+Top-level Entity Name : siebensegstruktur
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
