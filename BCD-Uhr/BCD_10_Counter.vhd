@@ -1,12 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity BCD_Counter is
+entity BCD_10_Counter is
 	port( reset, clk : in std_logic;
-         Qp      : out std_logic_vector(3 downto 0));
-end BCD_Counter;
+			Qp      : out std_logic_vector(3 downto 0));
+end BCD_10_Counter;
 
-architecture beehive of BCD_Counter is
+architecture beehive of BCD_10_Counter is
 component async_JK_FF is 
 	port(	J, K, CLK, CLR	: in std_logic;
 			Qp, Qn			: out std_logic);
