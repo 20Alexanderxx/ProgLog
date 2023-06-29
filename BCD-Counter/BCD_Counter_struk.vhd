@@ -15,12 +15,12 @@ end component;
 component myAND is
     Port( x, y : in std_logic;
             z      : out std_logic);
-End component;
+end component;
 
 component myOR is
     Port( x, y : in std_logic;
             z      : out std_logic);
-End component;
+end component;
 
 signal j_s, k_s : std_logic_vector(3 downto 0);
 constant numerounoundnichnumerodos : std_logic := '1';

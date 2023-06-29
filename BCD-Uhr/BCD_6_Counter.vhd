@@ -24,23 +24,28 @@ begin
 	FlipFlop1: async_JK_FF port map(j_s(1), k_s(1), clk_s, reset, qp_s(1), qn_s(1));
 	FlipFlop2: async_JK_FF port map(j_s(2), k_s(2), clk_s, reset, qp_s(2), qn_s(2));
 	
-	j_s(2) <= (sen and sval(2)) or (qp_s(0) and qp_s(1)); --(sen and sval(2)) or 
-	k_s(2) <= (sen and not sval(2)) or(qp_s(1) or qp_s(0)); --(sen and not sval(2)) or 
-	
-	j_s(1) <= (sen and sval(1)) or (qp_s(0) and qn_s(2)); --(sen and sval(1)) or 
-	k_s(1) <= (sen and not sval(1)) or (qp_s(0) or qp_s(2)); --(sen and not sval(1)) or 
-	
-	j_s(0) <= (sen and sval(0)) or (qp_s(1) nand qp_s(2)); --(sen and sval(0)) or 
-	k_s(0) <= (sen and not sval(0)) or numerounoundnichnumerodos; --(sen and not sval(0)) or 
-	
 	process(sen, qp_s, qn_s, sval)
 	begin
 		if (sen = '0') then
-			Qp <= qp_s;
+			j_s(2) <= qp_s(0) and qp_s(1);
+			k_s(2) <= qp_s(0) or qp_s(1);
+			
+			j_s(1) <= qp_s(0) and qn_s(2);
+			k_s(1) <= qp_s(0) or qp_s(2);
+			
+			j_s(0) <= qp_s(1) nand qp_s(2);
+			k_s(0) <= numerounoundnichnumerodos;
 		else
-			Qp <= sval(2 downto 0);
-			--qp_s <= sval(2 downto 0);
-			--qn_s <= not qp_s;
+			j_s(2) <= sen and sval(2);
+         k_s(2) <= sen and not sval(2);
+		   
+		   j_s(1) <= sen and sval(1);
+		   k_s(1) <= sen and not sval(1);
+		   
+		   j_s(0) <= sen and sval(0);
+		   k_s(0) <= sen and not sval(0);
 		end if;
+		Qp <= qp_s;
 	end process;
+	
 end beehive;
