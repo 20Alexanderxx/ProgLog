@@ -20,7 +20,7 @@ begin
 			count <= 1; 
 		elsif(rising_edge(clk_in)) then
 			count <=count+1;
-			if(count = 6) then
+			if(count = 2) then
 			--if(count = 1000000) then
 			--if(count = 25000000) then
 				clk_intern <= not clk_intern;

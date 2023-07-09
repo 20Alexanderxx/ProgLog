@@ -22,7 +22,9 @@ begin
 	FlipFlop1: async_JK_FF port map(j_s(1), k_s(1), clk, reset, qp_s(1), qn_s(1));
 	FlipFlop2: async_JK_FF port map(j_s(2), k_s(2), clk, reset, qp_s(2), qn_s(2));
 	FlipFlop3: async_JK_FF port map(j_s(3), k_s(3), clk, reset, qp_s(3), qn_s(3));
-	process(sen, qp_s, qn_s, sval)
+	
+	
+	process(sen, qp_s, qn_s, sval, clk)
 	begin
 		if (sen = '0') then
 			j_s(3) <= qp_s(0) and qp_s(1) and qp_s(2);

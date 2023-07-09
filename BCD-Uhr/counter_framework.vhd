@@ -58,20 +58,20 @@ constant zerrros : std_logic_vector(1 downto 0) := "00";
 
 signal LCD0, LCD1, LCD2, LCD3, LCD4, LCD5 : std_logic_vector(6 downto 0);
 
-signal sen0 : std_logic := '0';
-signal sen1 : std_logic := '0';
-signal sen2 : std_logic := '0';
+--signal sen0 : std_logic := '0';
+--signal sen1 : std_logic := '0';
+--signal sen2 : std_logic := '0';
 
 begin
 	notclr <= not clr;
-	Debo0: Debounce port map (clk, not sen(0), sen0);
-	Debo1: Debounce port map (clk, not sen(1), sen1);
-	Debo2: Debounce port map (clk, not sen(2), sen2);
+	--Debo0: Debounce port map (clk, not sen(0), sen0);
+	--Debo1: Debounce port map (clk, not sen(1), sen1);
+	--Debo2: Debounce port map (clk, not sen(2), sen2);
 	
 	gated_clk <= clk and cen;
 	CLK_DIV: dt_clkdiv port map (notclr, gated_clk, clksek);
 	
-	BCDSekunde: BCD_60_Counter port map (notclr, clksek, sen0, sval_h, sval_l, sek_res);
+	BCDSekunde: BCD_60_Counter port map (notclr, clksek, sen(0), sval_h, sval_l, sek_res);
 	
 	process(clksek)
 	begin
@@ -81,7 +81,7 @@ begin
 		end if;
 	end process;	
 	
-	BCDMinute: BCD_60_Counter port map (notclr, clkmin, sen1, sval_h, sval_l, min_res);
+	BCDMinute: BCD_60_Counter port map (notclr, clkmin, sen(1), sval_h, sval_l, min_res);
 	
 	process(clkmin)
 	begin
@@ -91,7 +91,7 @@ begin
 		end if;
 	end process;
 	
-	BCDStunde: BCD_24_Counter port map (notclr, clkh, sen2, sval_h, sval_l, h_res);
+	BCDStunde: BCD_24_Counter port map (notclr, clkh, sen(2), sval_h, sval_l, h_res);
 	
 	BCDSekEto7SEG: bcd port map (sek_res(3 downto 0), immereins, immernull, LCD0);
 	sekZto7Seg <= immernull & sek_res(6 downto 4);
