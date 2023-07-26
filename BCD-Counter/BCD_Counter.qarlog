@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter.qarlog
+
+Archive:	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter.qar
+Date:		Tue Jul 11 17:15:43 2023
+Quartus Prime		22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter.qpf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter.qsf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter_D.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/BCD_Counter_struk.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/Counter_framework.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Counter/bcdcounter_tb.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_3_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_6_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/PL_library/clk_div/dt_clkdiv.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/PL_library/flipflop/flipflop_async_reset/standard/async_D_FF.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/PL_library/flipflop/flipflop_async_reset/standard/async_JK_FF.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myAND.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/ownLib/myOR.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd.vhd
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

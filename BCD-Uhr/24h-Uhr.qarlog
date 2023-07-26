@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/24h-Uhr.qarlog
+
+Archive:	C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/24h-Uhr.qar
+Date:		Tue Jul 11 17:17:58 2023
+Quartus Prime		22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_10_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_24_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_3_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_60_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/BCD_6_Counter.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/Debounce.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/counter_framework.qpf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/counter_framework.qsf
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/counter_framework.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/BCD-Uhr/tb_template.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/PL_library/clk_div/dt_clkdiv.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/PL_library/flipflop/flipflop_async_reset/standard/async_D_FF.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/PL_library/flipflop/flipflop_async_reset/standard/async_JK_FF.vhd
+C:/Users/timhe/Documents/Semester 6/Programmierbare Logik/Uebung/git/siebensegbcd/bcd.vhd
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

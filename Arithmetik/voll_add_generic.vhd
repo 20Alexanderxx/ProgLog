@@ -1,20 +1,20 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity voll_sub_generic is 
+entity voll_add_generic is 
 generic (n : Integer := 4);
-port(clk, rst, bin : in std_logic;
+port(clk, rst, cin : in std_logic;
 		x, y : in std_logic_vector(n-1 downto 0);
-		bo : out std_logic;
+		co : out std_logic;
 		res : out std_logic_vector(n-1 downto 0));
-end voll_sub_generic;
+end voll_add_generic;
 
 
-architecture behave of voll_sub_generic is
+architecture behave of voll_add_generic is
 
-component voll_sub is 
-port( x, y, bi : in std_logic;
-		res, bo : out std_logic);
+component voll_add is 
+port( x, y, ci : in std_logic;
+		res, co : out std_logic);
 end component;
 
 component NBit_Register is
@@ -29,8 +29,8 @@ component async_MS_D_FF is
 			Qp, Qn				: out std_logic);
 end component;
 
-signal s_x, s_y, s_bo, s_res, s_b_tmp : std_logic_vector(n-1 downto 0);
-signal s_bin, s_b_neg : std_logic;
+signal s_x, s_y, s_co, s_res, s_c_tmp : std_logic_vector(n-1 downto 0);
+signal s_cin, s_b_neg : std_logic;
 
 constant uno : std_logic := '1';
 signal s_clk : std_logic := '0';
@@ -41,17 +41,17 @@ begin
 	-- input registers
 	REG01 : NBit_Register generic map (n) port map(x, uno, s_clk, rst, s_x);
 	REG02 : NBit_Register generic map (n) port map(y, uno, s_clk, rst, s_y);
-	FF3 : async_MS_D_FF port map (bin, s_clk, uno, rst, s_bin, s_b_neg);
+	FF3 : async_MS_D_FF port map (cin, s_clk, uno, rst, s_cin, s_b_neg);
 	
 	--concat carry values
-	s_b_tmp <= s_bo(n-2 downto 0) & s_bin;
+	s_c_tmp <= s_co(n-2 downto 0) & s_cin;
 	
-	subs: 
+	adds: 
 	for i in 0 to (n-1) generate
-		suuuuub : voll_sub port map (s_x(i), s_y(i), s_b_tmp(i), s_res(i), s_bo(i));
-	end generate subs;
+		adddd : voll_add port map (s_x(i), s_y(i), s_c_tmp(i), s_res(i), s_co(i));
+	end generate adds;
 
 	REG1OUT : NBit_Register generic map (n) port map(s_res, uno, s_clk, rst, res);
-	FFOUT : async_MS_D_FF port map (s_bo(n-1), s_clk, uno, rst, bo, s_b_neg);
+	FFOUT : async_MS_D_FF port map (s_co(n-1), s_clk, uno, rst, co, s_b_neg);
 
 end behave;

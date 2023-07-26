@@ -11,6 +11,6 @@ begin
 	process(sel, x, y, ci)
 	begin
 		res <= (ci xor y) xor x;
-		co <= (y nand x) nand ((ci xor y) nand (x xor sel));
+		co <= (y nand ci) nand ((ci xor y) nand (x xor sel));
 	end process;
 end behave;
